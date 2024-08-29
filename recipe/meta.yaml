@@ -1,5 +1,5 @@
 {% set name = "plothist" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: b4606d9ff7db3cc1a7f6f5d5440fd959e1d1292818910cc0d142b23e65e4de76
+  sha256: 21a67583c7c07734d3295ae80eb382cca6070ad556f4221a6612870793ff51d3
 
 build:
   entry_points:
@@ -28,9 +28,7 @@ requirements:
     - matplotlib-base >=3.0
     - pyyaml >=5.3.1
     - scipy >=1.6.0
-    # Needed for install_latin_modern_fonts
-    - wget
-    - unzip
+    - requests >=2.25.0
 
 test:
   imports:
