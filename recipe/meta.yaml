@@ -14,15 +14,15 @@ build:
     - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
     - numpy >=1.14.5
     - matplotlib-base >=3.0
@@ -39,6 +39,7 @@ test:
     - install_latin_modern_fonts  # [linux]
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/cyrraz/plothist
