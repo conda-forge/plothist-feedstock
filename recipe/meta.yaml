@@ -1,5 +1,5 @@
 {% set name = "plothist" %}
-{% set version = "1.2.6" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: 21a67583c7c07734d3295ae80eb382cca6070ad556f4221a6612870793ff51d3
+  sha256: 46419a2e551988527956ed9d19879bb129558511d9910908e0aa7d22fa6987cc
 
 build:
   entry_points:
     - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
