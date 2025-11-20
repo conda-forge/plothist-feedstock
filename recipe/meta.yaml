@@ -1,5 +1,6 @@
 {% set name = "plothist" %}
 {% set version = "1.3.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -13,14 +14,15 @@ build:
   entry_points:
     - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - flit-core >=3.2,<4
     - pip
+    - python {{ python_min }}
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
