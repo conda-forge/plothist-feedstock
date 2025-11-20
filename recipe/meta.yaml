@@ -1,5 +1,6 @@
 {% set name = "plothist" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +8,21 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: 5906ebd8cc51f64d6e95398abee0a14374a2953159f670a10296439c2e321391
+  sha256: 716150596092fdceca0861f2b3b02e441044d33231365a990d75038f6ef23d54
 
 build:
   entry_points:
     - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - flit-core >=3.2,<4
     - pip
+    - python {{ python_min }}
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
