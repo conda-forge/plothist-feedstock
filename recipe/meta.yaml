@@ -1,5 +1,6 @@
 {% set name = "plothist" %}
 {% set version = "1.5.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -10,17 +11,16 @@ source:
   sha256: 46419a2e551988527956ed9d19879bb129558511d9910908e0aa7d22fa6987cc
 
 build:
-  entry_points:
-    - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - flit-core >=3.2,<4
     - pip
+    - python {{ python_min }}
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
@@ -29,14 +29,13 @@ requirements:
     - pyyaml >=5.3.1
     - scipy >=1.6.0
     - requests >=2.25.0
+    - plothist_utils >=0.0.1
 
 test:
   imports:
     - plothist
   commands:
     - pip check
-    # On macOS need /Users/<username>/Library/Fonts
-    - install_latin_modern_fonts  # [linux]
   requires:
     - pip
     - python {{ python_min }}
