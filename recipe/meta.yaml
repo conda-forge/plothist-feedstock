@@ -11,8 +11,6 @@ source:
   sha256: 295119441fd1b15707cb3bc9af244faec1362104445a0f5d1a1ec9b5a6803d38
 
 build:
-  entry_points:
-    - install_latin_modern_fonts = plothist.scripts.install_latin_modern_fonts:install_latin_modern_fonts
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -31,14 +29,13 @@ requirements:
     - pyyaml >=5.3.1
     - scipy >=1.6.0
     - requests >=2.25.0
+    - plothist_utils >=0.0.1
 
 test:
   imports:
     - plothist
   commands:
     - pip check
-    # On macOS need /Users/<username>/Library/Fonts
-    - install_latin_modern_fonts  # [linux]
   requires:
     - pip
     - python {{ python_min }}
