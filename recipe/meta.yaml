@@ -1,5 +1,5 @@
 {% set name = "plothist" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: 295119441fd1b15707cb3bc9af244faec1362104445a0f5d1a1ec9b5a6803d38
+  sha256: acfbf88089eca50c36d905380d0da43626936a9e94843a297e037b115afc499a
 
 build:
   noarch: python
