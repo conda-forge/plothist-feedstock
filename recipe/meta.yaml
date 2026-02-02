@@ -1,6 +1,6 @@
 {% set name = "plothist" %}
 {% set version = "1.8.0" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -25,8 +25,8 @@ requirements:
     - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
     - numpy >=1.14.5
-    - matplotlib-base >=3.0
-    - pyyaml >=5.3.1
+    - matplotlib-base >=3.10.8
+    - pyyaml >=6.0.3
     - scipy >=1.6.0
     - requests >=2.25.0
     - plothist_utils >=0.0.1
