@@ -1,6 +1,6 @@
 {% set name = "plothist" %}
-{% set version = "1.7.0" %}
-{% set python_min = "3.9" %}
+{% set version = "1.8.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: 295119441fd1b15707cb3bc9af244faec1362104445a0f5d1a1ec9b5a6803d38
+  sha256: acfbf88089eca50c36d905380d0da43626936a9e94843a297e037b115afc499a
 
 build:
   noarch: python
@@ -25,8 +25,8 @@ requirements:
     - python >={{ python_min }}
     - boost-histogram >=1.4.0,<1.5.dev0
     - numpy >=1.14.5
-    - matplotlib-base >=3.0
-    - pyyaml >=5.3.1
+    - matplotlib-base >=3.10.8
+    - pyyaml >=6.0.3
     - scipy >=1.6.0
     - requests >=2.25.0
     - plothist_utils >=0.0.1
