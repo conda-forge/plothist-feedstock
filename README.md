@@ -3,13 +3,13 @@ About plothist-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/plothist-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/cyrraz/plothist
+Home: https://github.com/8-hat/plothist
 
 Package license: BSD-3-Clause
 
 Summary: Plot histograms in a scalable way and a beautiful style.
 
-Development: https://github.com/cyrraz/plothist
+Development: https://github.com/8-hat/plothist
 
 Documentation: https://plothist.readthedocs.io/
 
