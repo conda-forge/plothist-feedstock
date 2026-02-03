@@ -41,12 +41,12 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://github.com/cyrraz/plothist
+  home: https://github.com/8-hat/plothist
   summary: Plot histograms in a scalable way and a beautiful style.
   license: BSD-3-Clause
   license_file: LICENSE
   doc_url: https://plothist.readthedocs.io/
-  dev_url: https://github.com/cyrraz/plothist
+  dev_url: https://github.com/8-hat/plothist
 
 extra:
   recipe-maintainers:
