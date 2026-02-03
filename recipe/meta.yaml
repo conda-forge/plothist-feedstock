@@ -1,5 +1,5 @@
 {% set name = "plothist" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plothist-{{ version }}.tar.gz
-  sha256: acfbf88089eca50c36d905380d0da43626936a9e94843a297e037b115afc499a
+  sha256: 017bfe99366ac34cc44fc6d8021b658bc52a686bd4a3ab1c7c65b12c8e260080
 
 build:
   noarch: python
@@ -41,12 +41,12 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://github.com/cyrraz/plothist
+  home: https://github.com/8-hat/plothist
   summary: Plot histograms in a scalable way and a beautiful style.
   license: BSD-3-Clause
   license_file: LICENSE
   doc_url: https://plothist.readthedocs.io/
-  dev_url: https://github.com/cyrraz/plothist
+  dev_url: https://github.com/8-hat/plothist
 
 extra:
   recipe-maintainers:
