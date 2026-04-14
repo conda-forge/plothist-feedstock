@@ -29,7 +29,7 @@ requirements:
     - pyyaml >=6.0.3
     - scipy >=1.6.0
     - requests >=2.25.0
-    - plothist_utils >=0.0.1
+    - plothist_utils >=0.0.3
 
 test:
   imports:
